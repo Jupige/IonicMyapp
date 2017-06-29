@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <dx-data-grid ng-if="columns" [dataSource]="datas" [columns]="columns" 
+  [allowColumnResizing]="true" 
+  [allowColumnReordering]="true"
+  [showBorders]="true"
+  [showColumnHeaders]="true"
+  [showRowLines]="true"
+  [showColumnHeaders]="true"
+  [showColumnLines]="true"
+  [filterRow]="true"
+  [headerFilter]="true"
+  [paging]="false">
+    <dxo-search-panel [visible]="true"></dxo-search-panel>
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-group-panel [visible]="true"></dxo-group-panel>
+    <dxo-grouping #expand [autoExpandAll]="true"></dxo-grouping>
+  </dx-data-grid>
+</ion-content>
